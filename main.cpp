@@ -1,9 +1,6 @@
 #include <iostream>
 #include <queue>
 
-#include "Request.h"
-#include "WebServer.h"
-
 using namespace std;
 
 
@@ -11,14 +8,21 @@ using namespace std;
 #define MAX_REQUEST_LENGTH 100
 
 
+struct Request {
+    int time;
+    string in;
+    string out;
+};
 
 
+Request createRequest(){
 
+}
 
 
 int main(){
     //create a list of webservers
-    Webserver* webservers = Webserver[50]();
+    WebServer* webservers = Webserver[50]();
     //create a queue of requests
     queue<Request> requestqueue;
     for(int i=0; i<NUM_WEBSERVERS*20; i++){
