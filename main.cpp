@@ -1,24 +1,12 @@
 #include <iostream>
 #include <queue>
+#include "request.h"
 
 using namespace std;
 
 
-#define NUM_WEBSERVERS 50
-#define MAX_REQUEST_LENGTH 100
-
-
-struct Request {
-    int time;
-    string in;
-    string out;
-};
-
-
-Request createRequest(){
-
-}
-
+int NUM_WEBSERVERS = 50
+int MAX_REQUEST_LENGTH = 100
 
 int main(){
     //create a list of webservers
