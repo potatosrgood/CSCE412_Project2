@@ -1,4 +1,3 @@
-#include "Request.h" // Include the header file for the Request class
 #include "WebServer.h"
 
 bool WebServer::iterate() {
