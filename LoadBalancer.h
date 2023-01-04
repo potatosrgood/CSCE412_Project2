@@ -7,8 +7,9 @@
 
 class LoadBalancer {
   public:
-    LoadBalancer() {}
+    LoadBalancer(int serverCount) {}
     void performCycle();
+    void launch();
     bool hasItems() { return !requests.empty() };
     int getTime() { return clockTime; };
     void addRequest(Request newreq) { requests.push(newreq); };
