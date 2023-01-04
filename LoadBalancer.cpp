@@ -5,26 +5,31 @@ LoadBalancer::LoadBalancer (int serverCount) {
     servers.emplace_back();
   }
   clockTime = 0;
+  serversDone = false;
 }
 
 void LoadBalancer::performCycle() {
+  bool hasRunning = false;
   for(int i = 0; i < servers.size(); i++) {
     bool res = servers[i].iterate();
     if(res) {
-      cout << "Web server number " << i << " is starting a new task" << endl;
-      servers[i].startNewRequest(requests.front());
-      requests.pop();
+      if(!requests.empty()) {
+        cout << "Web server number " << i << " is starting a new task" << endl;
+        servers[i].startNewRequest(requests.front());
+        requests.pop();
+        hasRunning = true;
+      }
+    } else {
+      hasRunning = true;
     }
-    if(requests.empty()) {
-      break;
-    }
+  }
+  if(!hasRunning) {
+    serversDone = true;
   }
 }
 
-void LoadBalancer::launch() {
-  while(hasItems()) {
-    cout << "At time: " << clockTime << endl;
-    performCycle();
-    ++clockTime;
+void LoadBalancer::validator() {
+  for(int i = 0; i < servers.size(); i++) {
+    cout << servers[i].timeLeft << endl;
   }
 }

@@ -15,12 +15,14 @@ class LoadBalancer {
   public:
     LoadBalancer(int serverCount);
     void performCycle();
-    void launch();
-    bool hasItems() { return !requests.empty(); };
+    bool hasItems() { return !serversDone; };
     int getTime() { return clockTime; };
+    void incTime() { clockTime++; };
     void addRequest(Request newreq) { requests.push(newreq); };
+    void validator();
   private:
     queue<Request> requests;
     vector<WebServer> servers;
     int clockTime;
+    bool serversDone;
 };
