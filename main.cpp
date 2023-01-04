@@ -1,6 +1,9 @@
 #include <iostream>
 #include <queue>
 
+#include "Request.h"
+#include "WebServer.h"
+
 using namespace std;
 
 
@@ -8,15 +11,9 @@ using namespace std;
 #define MAX_REQUEST_LENGTH 100
 
 
-struct Request {
-    int time;
-    string in;
-    string out;
-};
 
-Request createRequest(){
 
-}
+
 
 
 int main(){

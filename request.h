@@ -6,3 +6,4 @@ struct Request {
     string in;
     string out;
 };
+
