@@ -10,7 +10,7 @@ class WebServer {
 
   WebServer() {}
   void startNewRequest(Request r);
-  void iterate();
+  bool iterate();
 };
 
 #endif

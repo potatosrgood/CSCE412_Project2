@@ -9,7 +9,9 @@ class LoadBalancer {
   public:
     LoadBalancer() {}
     void performCycle();
-    int getTime();
+    bool hasItems() { return !requests.empty() };
+    int getTime() { return clockTime; };
+    void addRequest(Request newreq) { requests.push(newreq); };
   private:
     queue<Request> requests;
     vector<WebServer> servers;

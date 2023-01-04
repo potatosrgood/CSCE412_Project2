@@ -1,18 +1,12 @@
 #include "Request.h" // Include the header file for the Request class
+#include "WebServer.h"
 
-class WebServer{
-public:
-    int timeLeft = -1;
-    Request currentRequest;
+bool WebServer::iterate() {
+  timeLeft--;
+  return (timeLeft <= 0) ? true : false;
+}
 
-    WebServer(){
-    }
-    void startNewRequest(Request r){
-        currentRequest = r;
-        timeLeft = r.time;
-    }
-    void iterate(){
-        timeLeft--;
-    }
-
-};
+void WebServer::startNewRequest(Request r) {
+  currentRequest = r;
+  timeLeft = r.time;
+}
