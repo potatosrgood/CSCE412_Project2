@@ -2,6 +2,7 @@
 #include <queue>
 #include "LoadBalancer.h"
 #include <stdio.h>
+#include <random>
 
 using namespace std;
 
@@ -13,14 +14,22 @@ int NUM_WEBSERVERS = 50;
  * @brief The maximum length of a request
  */
 int MAX_REQUEST_LENGTH = 100;
+
 /**
  * @brief Generates a random number in the range [0, 5]
  * @return The generated number
  */
-int randomChance() {
+int randomChance(int low, int high) {
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dist(0, 5);
+    std::uniform_int_distribution<> dist(low, high);
+    return dist(gen);
+}
+
+int randomFewer(double lambda) {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::exponential_distribution<> dist(lambda);
     return dist(gen);
 }
 /**
@@ -45,10 +54,14 @@ int main(int argc, char **argv){
   cout << "launching" << endl;
   while(loadb.hasItems() && loadb.getTime() < atoi(argv[3])) {
     cout << "At time: " << loadb.getTime() << endl;
-    if(randomChance() == 0) {
-      cout << "New request" << endl;
-      Request t_req;
-      loadb.addRequest(t_req);
+    if(randomChance(0, randomChance(3, 8)) == 0) {
+      int newReqs = randomFewer(1.0)+1;
+      cout << newReqs << " new request(s)" << endl;
+      while(newReqs > 0) {
+        Request t_req;
+        loadb.addRequest(t_req);
+        --newReqs;
+      }
     }
     loadb.performCycle();
     loadb.incTime();
