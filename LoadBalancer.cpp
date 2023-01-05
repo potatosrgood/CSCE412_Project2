@@ -13,6 +13,9 @@ void LoadBalancer::performCycle() {
   for(int i = 0; i < servers.size(); i++) {
     bool res = servers[i].iterate();
     if(res) {
+      if(servers[i].timeLeft == 0) {
+        cout << "Server " << i << " has completed a task" << endl;
+      }
       if(!requests.empty()) {
         cout << "Web server number " << i << " is starting a new task" << endl;
         servers[i].startNewRequest(requests.front());

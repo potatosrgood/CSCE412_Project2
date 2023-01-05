@@ -6,9 +6,6 @@ using std::endl;
 
 bool WebServer::iterate() {
   timeLeft--;
-  if(timeLeft == 0) {
-    cout << "Server has completed a task" << endl;
-  }
   if(timeLeft < 0) {
     timeLeft = -1;
   }
