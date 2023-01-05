@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loadbalancer_0',['LoadBalancer',['../classLoadBalancer.html',1,'LoadBalancer'],['../classLoadBalancer.html#a9f837971f41bbdd69c59adf6b59d7a2e',1,'LoadBalancer::LoadBalancer()']]]
+  ['gettime_0',['getTime',['../classLoadBalancer.html#a53a98f96b3ed2f4940d16b24e16f3d48',1,'LoadBalancer']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['startnewrequest_0',['startNewRequest',['../classWebServer.html#adad949debd2ef186bc8784be1a48509b',1,'WebServer']]]
+  ['out_0',['out',['../classRequest.html#ab217332721f669fe30c66e0861ea73ef',1,'Request']]]
 ];

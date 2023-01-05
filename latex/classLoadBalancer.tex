@@ -1,61 +1,14 @@
 \hypertarget{classLoadBalancer}{}\doxysection{Load\+Balancer Class Reference}
 \label{classLoadBalancer}\index{LoadBalancer@{LoadBalancer}}
-\doxysubsection*{Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classLoadBalancer_a9f837971f41bbdd69c59adf6b59d7a2e}{Load\+Balancer}} (int server\+Count)
-\begin{DoxyCompactList}\small\item\em Constructs a new load balancer with the given number of servers. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classLoadBalancer_a3660dc63e2169f39cbd0d3cdd73506e2}{perform\+Cycle}} ()
-\begin{DoxyCompactList}\small\item\em Performs a single clock cycle for the load balancer. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLoadBalancer_ae0870af99cd5d558921fa06a910c5062}\label{classLoadBalancer_ae0870af99cd5d558921fa06a910c5062}} 
-bool {\bfseries has\+Items} ()
-\item 
-\mbox{\Hypertarget{classLoadBalancer_a53a98f96b3ed2f4940d16b24e16f3d48}\label{classLoadBalancer_a53a98f96b3ed2f4940d16b24e16f3d48}} 
-int {\bfseries get\+Time} ()
-\item 
-\mbox{\Hypertarget{classLoadBalancer_af0e3c5c71a68324cd635f52c1430752e}\label{classLoadBalancer_af0e3c5c71a68324cd635f52c1430752e}} 
-void {\bfseries inc\+Time} ()
-\item 
-\mbox{\Hypertarget{classLoadBalancer_a961da8627c32a417bee6fc51e7248b39}\label{classLoadBalancer_a961da8627c32a417bee6fc51e7248b39}} 
-void {\bfseries add\+Request} (\mbox{\hyperlink{classRequest}{Request}} newreq)
-\item 
-\mbox{\Hypertarget{classLoadBalancer_a37246b6841e5b17ac4e6733a670fd747}\label{classLoadBalancer_a37246b6841e5b17ac4e6733a670fd747}} 
-void {\bfseries validator} ()
-\begin{DoxyCompactList}\small\item\em Queries the servers and checks the time remaining for them to complete their tasks. Then checks how many requests are in the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classLoadBalancer_a9f837971f41bbdd69c59adf6b59d7a2e}\label{classLoadBalancer_a9f837971f41bbdd69c59adf6b59d7a2e}} 
-\index{LoadBalancer@{LoadBalancer}!LoadBalancer@{LoadBalancer}}
-\index{LoadBalancer@{LoadBalancer}!LoadBalancer@{LoadBalancer}}
-\doxysubsubsection{\texorpdfstring{LoadBalancer()}{LoadBalancer()}}
-{\footnotesize\ttfamily Load\+Balancer\+::\+Load\+Balancer (\begin{DoxyParamCaption}\item[{int}]{server\+Count }\end{DoxyParamCaption})}
+A class representing a load balancer that distributes requests to a pool of web servers.  
 
 
 
-Constructs a new load balancer with the given number of servers. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em server\+Count} & The number of servers to create \\
-\hline
-\end{DoxyParams}
-
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classLoadBalancer_a3660dc63e2169f39cbd0d3cdd73506e2}\label{classLoadBalancer_a3660dc63e2169f39cbd0d3cdd73506e2}} 
-\index{LoadBalancer@{LoadBalancer}!performCycle@{performCycle}}
-\index{performCycle@{performCycle}!LoadBalancer@{LoadBalancer}}
-\doxysubsubsection{\texorpdfstring{performCycle()}{performCycle()}}
-{\footnotesize\ttfamily void Load\+Balancer\+::perform\+Cycle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\ttfamily \#include $<$Load\+Balancer.\+h$>$}
 
 
 
-Performs a single clock cycle for the load balancer. 
-
-This function iterates through all the servers and checks if any of them have completed their current task. If a server is available, it will start processing the next request in the queue. If no servers are available and the request queue is empty, it sets the {\ttfamily servers\+Done} flag to true. If there are no tasks and a server is done, then the server sits idle waiting. 
-
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
-\item 
-Load\+Balancer.\+h\item 
-Load\+Balancer.\+cpp\end{DoxyCompactItemize}
+Collaboration diagram for Load\+Balancer\+:
