@@ -1,0 +1,34 @@
+\hypertarget{request_8h_source}{}\doxysection{request.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <random>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{using }std::string;}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{classRequest}{Request}} \{}
+\DoxyCodeLine{13   \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{classRequest_afaf8d8928de7ffff8a3767589489bd33}{Request}}() \{ \mbox{\hyperlink{classRequest_a3cfb576ed0b5e08612f3de8bc7cd72e2}{time}} = generateTime(); \mbox{\hyperlink{classRequest_ab682dddf4e7b8dfd3863c1655f49f5ca}{in}} = generateRandomIpAddress(); \mbox{\hyperlink{classRequest_ab217332721f669fe30c66e0861ea73ef}{out}} = generateRandomIpAddress(); \};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} \mbox{\hyperlink{classRequest_a3cfb576ed0b5e08612f3de8bc7cd72e2}{time}};  }
+\DoxyCodeLine{19     \textcolor{keywordtype}{string} \mbox{\hyperlink{classRequest_ab682dddf4e7b8dfd3863c1655f49f5ca}{in}}; }
+\DoxyCodeLine{20     \textcolor{keywordtype}{string} \mbox{\hyperlink{classRequest_ab217332721f669fe30c66e0861ea73ef}{out}}; }
+\DoxyCodeLine{21   \textcolor{keyword}{private}:}
+\DoxyCodeLine{26     \textcolor{keywordtype}{string} generateRandomIpAddress() \{}
+\DoxyCodeLine{27       std::random\_device rd;}
+\DoxyCodeLine{28       std::mt19937 gen(rd());}
+\DoxyCodeLine{29       std::uniform\_int\_distribution<> dis(0, 255);}
+\DoxyCodeLine{30       \textcolor{keywordflow}{return} std::to\_string(dis(gen)) + \textcolor{stringliteral}{"{}."{}} + std::to\_string(dis(gen)) + \textcolor{stringliteral}{"{}."{}} + std::to\_string(dis(gen)) + \textcolor{stringliteral}{"{}."{}} + std::to\_string(dis(gen));}
+\DoxyCodeLine{31     \};}
+\DoxyCodeLine{36     \textcolor{keywordtype}{int} generateTime() \{}
+\DoxyCodeLine{37       std::random\_device rd;}
+\DoxyCodeLine{38       std::mt19937 gen(rd());}
+\DoxyCodeLine{39       std::uniform\_int\_distribution<> dist(2, 50);}
+\DoxyCodeLine{40       \textcolor{keywordflow}{return} dist(gen);}
+\DoxyCodeLine{41     \};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \};}
+\DoxyCodeLine{44 }
+
+\end{DoxyCode}

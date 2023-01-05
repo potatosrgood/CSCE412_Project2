@@ -16,7 +16,8 @@ LoadBalancer::LoadBalancer (int serverCount) {
  * This function iterates through all the servers and checks if any of them
  * have completed their current task. If a server is available, it will start
  * processing the next request in the queue. If no servers are available and
- * the request queue is empty, it sets the `serversDone` flag to true.
+ * the request queue is empty, it sets the `serversDone` flag to true. If there
+ * are no tasks and a server is done, then the server sits idle waiting.
  */
 void LoadBalancer::performCycle() {
   unsigned short numActive = 1;
@@ -40,7 +41,7 @@ void LoadBalancer::performCycle() {
   }
 }
 /**
- * @brief Prints the time left for each server's current task
+ * @brief Queries the servers and checks the time remaining for them to complete their tasks. Then checks how many requests are in the queue.
  */
 void LoadBalancer::validator() {
   for(int i = 0; i < servers.size(); i++) {

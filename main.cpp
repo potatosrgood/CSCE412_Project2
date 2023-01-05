@@ -7,16 +7,9 @@
 using namespace std;
 
 /**
- * @brief The number of web servers to create
- */
-int NUM_WEBSERVERS = 50;
-/**
- * @brief The maximum length of a request
- */
-int MAX_REQUEST_LENGTH = 100;
-
-/**
- * @brief Generates a random number in the range [0, 5]
+ * @brief Generates a random number in the range specified by low and high with a uniform distribution
+ * @param low an integer for the lowest number of the range inclusive
+ * @param high an integer for the highest number of the range inclusive
  * @return The generated number
  */
 int randomChance(int low, int high) {
@@ -26,16 +19,22 @@ int randomChance(int low, int high) {
     return dist(gen);
 }
 
+/**
+ * @brief Generates a random number with the exponential distribution with our given lambda
+ * @param lambda the lambda for the exponential distribution
+ * @return The generated number
+ */
 int randomFewer(double lambda) {
     std::random_device rd;
     std::mt19937 gen(rd());
     std::exponential_distribution<> dist(lambda);
     return dist(gen);
 }
+
 /**
- * @brief The main program entry point
+ * @brief The main program entry point, creates and runs a load balancer for the given run duration
  * @param argc The number of command-line arguments
- * @param argv The command-line arguments
+ * @param argv The command-line arguments, server count, request count, and run duration
  * @return The exit status of the program (1 for success, 0 for failure)
  */
 int main(int argc, char **argv){

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['in_1',['in',['../classRequest.html#ab682dddf4e7b8dfd3863c1655f49f5ca',1,'Request']]],
-  ['iterate_2',['iterate',['../classWebServer.html#af37f5267d3875419e64dc530e1c56b51',1,'WebServer']]]
+  ['clocktime_0',['clockTime',['../classLoadBalancer.html#a70c3d61934c60fc0828588cd0fc0c869',1,'LoadBalancer']]],
+  ['currentrequest_1',['currentRequest',['../classWebServer.html#a3569aaaa5858a157d5b1b46e49d0d77f',1,'WebServer']]]
 ];
