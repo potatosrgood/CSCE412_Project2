@@ -19,24 +19,23 @@ LoadBalancer::LoadBalancer (int serverCount) {
  * the request queue is empty, it sets the `serversDone` flag to true.
  */
 void LoadBalancer::performCycle() {
-  bool hasRunning = false;
+  unsigned short numActive = 1;
   for(int i = 0; i < servers.size(); i++) {
     bool res = servers[i].iterate();
     if(res) {
       if(servers[i].timeLeft == 0) {
-        cout << "Server " << i << " has completed a task" << endl;
+        numActive--;
+        //cout << "Server " << i << " has completed a task" << endl;
       }
       if(!requests.empty()) {
-        cout << "Web server number " << i << " is starting a new task" << endl;
+        //cout << "Web server number " << i << " is starting a new task" << endl;
         servers[i].startNewRequest(requests.front());
         requests.pop();
-        hasRunning = true;
+        numActive++;
       }
-    } else {
-      hasRunning = true;
     }
   }
-  if(!hasRunning) {
+  if(numActive==0) {
     serversDone = true;
   }
 }
