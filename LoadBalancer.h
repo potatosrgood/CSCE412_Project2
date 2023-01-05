@@ -58,4 +58,5 @@ class LoadBalancer {
     vector<WebServer> servers; //!< stores the servers the load balancer is responsible for
     int clockTime; //!< the current clock time, stored as an integer
     bool serversDone; //!< boolean representing the state of the servers. true if all of them are done
+    int numActive; //!< integer representing the number of servers that currently are active
 };

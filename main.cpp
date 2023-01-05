@@ -52,10 +52,10 @@ int main(int argc, char **argv){
   cout << "Created a load balancer with 100 requests and 10 web servers" << endl;
   cout << "launching" << endl;
   while(loadb.hasItems() && loadb.getTime() < atoi(argv[3])) {
-    cout << "At time: " << loadb.getTime() << endl;
+    cout << "Time: " << loadb.getTime() << " |";
     if(randomChance(0, randomChance(3, 8)) == 0) {
-      int newReqs = randomFewer(1.0)+1;
-      cout << newReqs << " new request(s)" << endl;
+      int newReqs = randomFewer(.5)+1;
+      //cout << newReqs << " new request(s)" << endl;
       while(newReqs > 0) {
         Request t_req;
         loadb.addRequest(t_req);
@@ -63,6 +63,10 @@ int main(int argc, char **argv){
       }
     }
     loadb.performCycle();
+    for(int i = 0; i<loadb.numActive; i++){
+      cout << "-";
+    }
+    cout << endl;
     loadb.incTime();
   }
   cout << "run success" << endl;

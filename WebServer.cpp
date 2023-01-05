@@ -20,7 +20,7 @@ bool WebServer::iterate() {
  * @param r The request to start processing
  */
 void WebServer::startNewRequest(Request r) {
-  cout << "Server has recieved request from " << r.in << " to " << r.out << " with time to complete of " << r.time << endl;
+  //cout << "Server has recieved request from " << r.in << " to " << r.out << " with time to complete of " << r.time << endl;
   currentRequest = r;
   timeLeft = r.time;
 }
