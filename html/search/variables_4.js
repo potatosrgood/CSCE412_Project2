@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['servers_0',['servers',['../classLoadBalancer.html#a64f65307b9957f2fa99bb76d2b92d966',1,'LoadBalancer']]],
-  ['serversdone_1',['serversDone',['../classLoadBalancer.html#a1ca22603ada08ec2f73407dfef4083a8',1,'LoadBalancer']]]
+  ['requests_40',['requests',['../classLoadBalancer.html#a39ab49555b8aa9dd038739b43e792b01',1,'LoadBalancer']]]
 ];

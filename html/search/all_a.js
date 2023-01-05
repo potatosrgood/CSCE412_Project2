@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['time_0',['time',['../classRequest.html#a3cfb576ed0b5e08612f3de8bc7cd72e2',1,'Request']]],
-  ['timeleft_1',['timeLeft',['../classWebServer.html#aa1f97e81a6c6a68373e597704fe93f2d',1,'WebServer']]]
+  ['servers_14',['servers',['../classLoadBalancer.html#a64f65307b9957f2fa99bb76d2b92d966',1,'LoadBalancer']]],
+  ['serversdone_15',['serversDone',['../classLoadBalancer.html#a1ca22603ada08ec2f73407dfef4083a8',1,'LoadBalancer']]],
+  ['startnewrequest_16',['startNewRequest',['../classWebServer.html#adad949debd2ef186bc8784be1a48509b',1,'WebServer']]]
 ];

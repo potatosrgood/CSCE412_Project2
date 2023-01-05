@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['webserver_0',['WebServer',['../classWebServer.html',1,'WebServer'],['../classWebServer.html#ad053f4e1808a3c10c7522d0dbbbc031a',1,'WebServer::WebServer()']]]
+  ['validator_19',['validator',['../classLoadBalancer.html#a37246b6841e5b17ac4e6733a670fd747',1,'LoadBalancer']]]
 ];
