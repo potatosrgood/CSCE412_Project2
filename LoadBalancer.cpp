@@ -47,4 +47,5 @@ void LoadBalancer::validator() {
   for(int i = 0; i < servers.size(); i++) {
     cout << servers[i].timeLeft << endl;
   }
+  cout << "queue items remaining " << requests.size() << endl;
 }
