@@ -17,19 +17,19 @@ Collaboration diagram for Request\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classRequest_afaf8d8928de7ffff8a3767589489bd33}\label{classRequest_afaf8d8928de7ffff8a3767589489bd33}} 
-\mbox{\hyperlink{classRequest_afaf8d8928de7ffff8a3767589489bd33}{Request}} ()
+{\bfseries Request} ()
 \begin{DoxyCompactList}\small\item\em Constructs a new request with random time, in and out values. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classRequest_a3cfb576ed0b5e08612f3de8bc7cd72e2}\label{classRequest_a3cfb576ed0b5e08612f3de8bc7cd72e2}} 
-int \mbox{\hyperlink{classRequest_a3cfb576ed0b5e08612f3de8bc7cd72e2}{time}}
+int {\bfseries time}
 \begin{DoxyCompactList}\small\item\em The time required to process the request. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classRequest_ab682dddf4e7b8dfd3863c1655f49f5ca}\label{classRequest_ab682dddf4e7b8dfd3863c1655f49f5ca}} 
-string \mbox{\hyperlink{classRequest_ab682dddf4e7b8dfd3863c1655f49f5ca}{in}}
+string {\bfseries in}
 \begin{DoxyCompactList}\small\item\em The IP address of the client making the request. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classRequest_ab217332721f669fe30c66e0861ea73ef}\label{classRequest_ab217332721f669fe30c66e0861ea73ef}} 
-string \mbox{\hyperlink{classRequest_ab217332721f669fe30c66e0861ea73ef}{out}}
+string {\bfseries out}
 \begin{DoxyCompactList}\small\item\em The IP address of the server to which the request is being sent. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
