@@ -6,10 +6,19 @@
 
 using namespace std;
 
-
+/**
+ * @brief The number of web servers to create
+ */
 int NUM_WEBSERVERS = 50;
+/**
+ * @brief The maximum length of a request
+ */
 int MAX_REQUEST_LENGTH = 100;
 
+/**
+ * @brief Generates a random number in the range [0, 5]
+ * @return The generated number
+ */
 int randomChance(int low, int high) {
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -23,7 +32,12 @@ int randomFewer(double lambda) {
     std::exponential_distribution<> dist(lambda);
     return dist(gen);
 }
-
+/**
+ * @brief The main program entry point
+ * @param argc The number of command-line arguments
+ * @param argv The command-line arguments
+ * @return The exit status of the program (1 for success, 0 for failure)
+ */
 int main(int argc, char **argv){
   cout << "Driver" << endl;
   if(argc < 4) {
