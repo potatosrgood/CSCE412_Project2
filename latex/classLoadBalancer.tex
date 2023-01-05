@@ -20,8 +20,8 @@ void {\bfseries inc\+Time} ()
 void {\bfseries add\+Request} (\mbox{\hyperlink{classRequest}{Request}} newreq)
 \item 
 \mbox{\Hypertarget{classLoadBalancer_a37246b6841e5b17ac4e6733a670fd747}\label{classLoadBalancer_a37246b6841e5b17ac4e6733a670fd747}} 
-void \mbox{\hyperlink{classLoadBalancer_a37246b6841e5b17ac4e6733a670fd747}{validator}} ()
-\begin{DoxyCompactList}\small\item\em Prints the time left for each server\textquotesingle{}s current task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void {\bfseries validator} ()
+\begin{DoxyCompactList}\small\item\em Queries the servers and checks the time remaining for them to complete their tasks. Then checks how many requests are in the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -53,7 +53,7 @@ Constructs a new load balancer with the given number of servers.
 
 Performs a single clock cycle for the load balancer. 
 
-This function iterates through all the servers and checks if any of them have completed their current task. If a server is available, it will start processing the next request in the queue. If no servers are available and the request queue is empty, it sets the {\ttfamily servers\+Done} flag to true. 
+This function iterates through all the servers and checks if any of them have completed their current task. If a server is available, it will start processing the next request in the queue. If no servers are available and the request queue is empty, it sets the {\ttfamily servers\+Done} flag to true. If there are no tasks and a server is done, then the server sits idle waiting. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
