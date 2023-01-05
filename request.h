@@ -21,6 +21,7 @@ class Request {
   private:
     /**
      * @brief Generates a random IP address
+     * This function was written using ChatGPT
      * @return A string representing the generated IP address
      */
     string generateRandomIpAddress() {
@@ -31,6 +32,7 @@ class Request {
     };
     /**
      * @brief Generates a random "time" value in the range [2, 50)
+     * This function was written using ChatGPT
      * @return The generated time value
      */
     int generateTime() {

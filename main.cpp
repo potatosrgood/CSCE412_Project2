@@ -72,6 +72,7 @@ int main(int argc, char **argv){
     loadb.incTime();
   }
 
+  //printing the graph
   for( int i=0; i<serversActive.size(); i+=10){
     cout << "@t="<<i<<" |";
     for(int j=0; j<serversActive.at(i); j++){
