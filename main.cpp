@@ -40,6 +40,8 @@ int randomFewer(double lambda) {
  * @return The exit status of the program (1 for success, 0 for failure)
  */
 int main(int argc, char **argv){
+ vector<short> serversActive;
+
   cout << "Driver" << endl;
   if(argc < 4) {
     cout << "Invalid parameters" << endl;
@@ -67,6 +69,7 @@ int main(int argc, char **argv){
     }
     cout << endl;
     loadb.performCycle();
+    serversActive.emplace_back(loadb.numActive);
     cout << "Servers running: ";
     for(int i = 0; i < loadb.numActive; i++) {
       cout << "*";
@@ -80,5 +83,12 @@ int main(int argc, char **argv){
   cout << "run success" << endl;
   cout << "validating remaining run time" << endl;
   loadb.validator();
+  for( int i=0; i<serversActive.size(); i+=5){
+    //cout << "@t="<<i<<" |";
+    for(int j=0; j<serversActive.at(i); j++){
+      //cout << '-';
+    }
+    //cout << endl;
+  }
   return 1;
 }
