@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['time_0',['time',['../classRequest.html#a3cfb576ed0b5e08612f3de8bc7cd72e2',1,'Request']]],
-  ['timeleft_1',['timeLeft',['../classWebServer.html#aa1f97e81a6c6a68373e597704fe93f2d',1,'WebServer']]]
+  ['request_0',['Request',['../classRequest.html',1,'Request'],['../classRequest.html#afaf8d8928de7ffff8a3767589489bd33',1,'Request::Request()']]],
+  ['requests_1',['requests',['../classLoadBalancer.html#a39ab49555b8aa9dd038739b43e792b01',1,'LoadBalancer']]]
 ];

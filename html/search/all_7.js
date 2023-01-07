@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['performcycle_0',['performCycle',['../classLoadBalancer.html#a3660dc63e2169f39cbd0d3cdd73506e2',1,'LoadBalancer']]]
+  ['numactive_0',['numActive',['../classLoadBalancer.html#a38a50203e2f6703d975c96896a4907fd',1,'LoadBalancer']]]
 ];

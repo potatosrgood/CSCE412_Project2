@@ -61,4 +61,6 @@ class LoadBalancer {
     int clockTime; //!< the current clock time, stored as an integer
     bool serversDone; //!< boolean representing the state of the servers. true if all of them are done
     int numActive; //!< integer representing the number of servers that currently are active
+    int maxTime; //!< integer for the maximum time to process a request
+    int minTime; //!< integer for minimum time to process a request
 };

@@ -10,6 +10,8 @@ LoadBalancer::LoadBalancer (int serverCount) {
   }
   clockTime = 0;
   serversDone = false;
+  minTime = 2100000;
+  maxTime = -1;
 }
 /**
  * @brief Performs a single clock cycle for the load balancer
@@ -31,6 +33,8 @@ void LoadBalancer::performCycle() {
         cout << "Server " << i << " has been assigned a new request from ";
         servers[i].startNewRequest(requests.front());
         cout << requests.front().in << " to " << requests.front().out << " that takes time " << requests.front().time << " to process" << endl;
+        maxTime = std::max(maxTime, requests.front().time);
+        minTime = std::min(minTime, requests.front().time);
         requests.pop();
         hasRunning = true;
       }

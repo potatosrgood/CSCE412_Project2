@@ -78,6 +78,7 @@ int main(int argc, char **argv){
   }
 
   cout << "run success" << endl;
+  cout << "Task time range: " << loadb.minTime << "-" << loadb.maxTime << endl;
   cout << "validating remaining run time" << endl;
   loadb.validator();
   return 1;

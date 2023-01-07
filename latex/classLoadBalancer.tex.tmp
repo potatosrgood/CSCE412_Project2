@@ -46,7 +46,16 @@ int {\bfseries clock\+Time}
 \begin{DoxyCompactList}\small\item\em the current clock time, stored as an integer \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classLoadBalancer_a1ca22603ada08ec2f73407dfef4083a8}\label{classLoadBalancer_a1ca22603ada08ec2f73407dfef4083a8}} 
 bool {\bfseries servers\+Done}
-\begin{DoxyCompactList}\small\item\em boolean representing the state of the servers. true if all of them are done \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em boolean representing the state of the servers. true if all of them are done \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadBalancer_a38a50203e2f6703d975c96896a4907fd}\label{classLoadBalancer_a38a50203e2f6703d975c96896a4907fd}} 
+int {\bfseries num\+Active}
+\begin{DoxyCompactList}\small\item\em integer representing the number of servers that currently are active \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadBalancer_a5836fc66f954e751a242c8c69f730dff}\label{classLoadBalancer_a5836fc66f954e751a242c8c69f730dff}} 
+int {\bfseries max\+Time}
+\begin{DoxyCompactList}\small\item\em integer for the maximum time to process a request \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadBalancer_a3c7cedf9697ae1f1c0d92215d06cd619}\label{classLoadBalancer_a3c7cedf9697ae1f1c0d92215d06cd619}} 
+int {\bfseries min\+Time}
+\begin{DoxyCompactList}\small\item\em integer for minimum time to process a request \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -111,7 +120,7 @@ Performs a single clock cycle for the load balancer.
 
 This function iterates through all the servers and checks if any of them have completed their current task. If a server is available, it will start processing the next request in the queue. If no servers are available and the request queue is empty, it sets the {\ttfamily servers\+Done} flag to true.
 
-This function iterates through all the servers and checks if any of them have completed their current task. If a server is available, it will start processing the next request in the queue. If no servers are available and the request queue is empty, it sets the {\ttfamily servers\+Done} flag to true. If there are no tasks and a server is done, then the server sits idle waiting. \mbox{\Hypertarget{classLoadBalancer_a37246b6841e5b17ac4e6733a670fd747}\label{classLoadBalancer_a37246b6841e5b17ac4e6733a670fd747}} 
+This function iterates through all the servers and checks if any of them have completed their current task. If a server is available, it will start processing the next request in the queue. If no servers are available and the request queue is empty, it sets the {\ttfamily servers\+Done} flag to true. \mbox{\Hypertarget{classLoadBalancer_a37246b6841e5b17ac4e6733a670fd747}\label{classLoadBalancer_a37246b6841e5b17ac4e6733a670fd747}} 
 \index{LoadBalancer@{LoadBalancer}!validator@{validator}}
 \index{validator@{validator}!LoadBalancer@{LoadBalancer}}
 \doxysubsubsection{\texorpdfstring{validator()}{validator()}}
@@ -121,7 +130,7 @@ This function iterates through all the servers and checks if any of them have co
 
 checks current state of load balancer 
 
-Queries the servers and checks the time remaining for them to complete their tasks. Then checks how many requests are in the queue. 
+Prints the time left for each server\textquotesingle{}s current task. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

@@ -131,6 +131,18 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>clockTime</b></td></tr
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>serversDone</b></td></tr>
 <tr class="memdesc:a1ca22603ada08ec2f73407dfef4083a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">boolean representing the state of the servers. true if all of them are done <br /></td></tr>
 <tr class="separator:a1ca22603ada08ec2f73407dfef4083a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38a50203e2f6703d975c96896a4907fd"><td class="memItemLeft" align="right" valign="top"><a id="a38a50203e2f6703d975c96896a4907fd" name="a38a50203e2f6703d975c96896a4907fd"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>numActive</b></td></tr>
+<tr class="memdesc:a38a50203e2f6703d975c96896a4907fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">integer representing the number of servers that currently are active <br /></td></tr>
+<tr class="separator:a38a50203e2f6703d975c96896a4907fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5836fc66f954e751a242c8c69f730dff"><td class="memItemLeft" align="right" valign="top"><a id="a5836fc66f954e751a242c8c69f730dff" name="a5836fc66f954e751a242c8c69f730dff"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>maxTime</b></td></tr>
+<tr class="memdesc:a5836fc66f954e751a242c8c69f730dff"><td class="mdescLeft">&#160;</td><td class="mdescRight">integer for the maximum time to process a request <br /></td></tr>
+<tr class="separator:a5836fc66f954e751a242c8c69f730dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c7cedf9697ae1f1c0d92215d06cd619"><td class="memItemLeft" align="right" valign="top"><a id="a3c7cedf9697ae1f1c0d92215d06cd619" name="a3c7cedf9697ae1f1c0d92215d06cd619"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>minTime</b></td></tr>
+<tr class="memdesc:a3c7cedf9697ae1f1c0d92215d06cd619"><td class="mdescLeft">&#160;</td><td class="mdescRight">integer for minimum time to process a request <br /></td></tr>
+<tr class="separator:a3c7cedf9697ae1f1c0d92215d06cd619"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A class representing a load balancer that distributes requests to a pool of web servers. </p>
@@ -241,7 +253,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>serversDone</b></td><
 
 <p>Performs a single clock cycle for the load balancer. </p>
 <p >This function iterates through all the servers and checks if any of them have completed their current task. If a server is available, it will start processing the next request in the queue. If no servers are available and the request queue is empty, it sets the <code>serversDone</code> flag to true.</p>
-<p >This function iterates through all the servers and checks if any of them have completed their current task. If a server is available, it will start processing the next request in the queue. If no servers are available and the request queue is empty, it sets the <code>serversDone</code> flag to true. If there are no tasks and a server is done, then the server sits idle waiting. </p>
+<p >This function iterates through all the servers and checks if any of them have completed their current task. If a server is available, it will start processing the next request in the queue. If no servers are available and the request queue is empty, it sets the <code>serversDone</code> flag to true. </p>
 
 </div>
 </div>
@@ -261,7 +273,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>serversDone</b></td><
 </div><div class="memdoc">
 
 <p>checks current state of load balancer </p>
-<p >Queries the servers and checks the time remaining for them to complete their tasks. Then checks how many requests are in the queue. </p>
+<p >Prints the time left for each server's current task. </p>
 
 </div>
 </div>
