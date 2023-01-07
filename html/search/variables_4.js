@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['requests_40',['requests',['../classLoadBalancer.html#a39ab49555b8aa9dd038739b43e792b01',1,'LoadBalancer']]]
+  ['out_0',['out',['../classRequest.html#ab217332721f669fe30c66e0861ea73ef',1,'Request']]]
 ];
